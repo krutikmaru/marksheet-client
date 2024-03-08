@@ -81,7 +81,13 @@ const GradeTable = ({ semester, subjects }) => {
                 <td className="py-2 px-4 border border-jhc-blue-primary">
                   {`${totalMarks} (${percentage}%)`}
                 </td>
-                <td className="py-2 px-4 border border-jhc-blue-primary text-jhc-blue-primary">
+                <td
+                  style={{
+                    color:
+                      grade.toLocaleLowerCase() === "F" ? "#f00" : "#3a3fdb",
+                  }}
+                  className="py-2 px-4 border border-jhc-blue-primary "
+                >
                   {grade}
                 </td>
               </tr>
